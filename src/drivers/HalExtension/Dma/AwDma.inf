@@ -1,0 +1,58 @@
+; Copyright (c) Nvidia Corporation.  All rights reserved.
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Computer
+ClassGuid={4d36e966-e325-11ce-bfc1-08002be10318}
+Provider=%MFGNAME%
+DriverVer   = 05/16/2014, 9.17.13.2757
+PnPLockdown=1
+CatalogFile = awdma.cat
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[DestinationDirs]
+DefaultDestDir = 11 ; DIRID_SYSTEM
+ 
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+awdma.dll = 1,,
+
+[Manufacturer]
+%MFGNAME% = DeviceList, NTARM
+
+[DeviceList.NTARM]
+%NV_HAL_EXT_DMA%    = NV_HAL_EXT_DMA,    ACPI\AWTH000B
+
+[SignatureAttributes] 
+awdma.dll = SignatureAttributes.HalExt 
+
+[SignatureAttributes.HalExt] 
+HalExt=true 
+
+[NV_HAL_EXT_DMA]
+AddReg = NV_HAL_EXT_DMA_AddReg
+CopyFiles = NV_HAL_EXT_DMA_CopyFiles
+
+[NV_HAL_EXT_DMA_AddReg]
+HKLM,"%OSEDB%\VEN_AWTH&DEV_000B","HALExtension",,"awdma.dll"
+
+[NV_HAL_EXT_DMA_CopyFiles]
+awdma.dll,,,0x00001000
+
+[NV_HAL_EXT_DMA.Services]
+AddService = , %SPSVCINST_ASSOCSERVICE%
+
+[Strings]
+
+;Non-localizable
+SPSVCINST_ASSOCSERVICE = 0x00000002
+OSEDB = "SYSTEM\CurrentControlSet\Control\OSExtensionDatabase"
+
+;Localizable
+DiskId1         = "Allwinner Windows Tegra DMA Hal Extension Driver Installation Disk #1"
+MFGNAME         = "Allwinner"
+NV_HAl_EXT_DMA  = "Allwinner Tegra DMA Hal Extension"

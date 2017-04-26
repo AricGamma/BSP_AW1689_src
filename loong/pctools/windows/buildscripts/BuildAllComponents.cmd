@@ -1,0 +1,8 @@
+call "%BUILD_SCRIPTS_ROOT%\BuildWindowsDrivers.cmd"
+call "%WorkRoot%\Build\BuildBootloader.cmd"
+call "%BUILD_SCRIPTS_ROOT%\BuildAllAppx.cmd"
+call "%BUILD_SCRIPTS_ROOT%\PackBootloader.cmd"
+call "%BUILD_SCRIPTS_ROOT%\PackDeviceConfigs.cmd"
+call "%BUILD_SCRIPTS_ROOT%\PackBootresource.cmd"
+call "%BUILD_SCRIPTS_ROOT%\PackAppx.cmd"
+call "%BUILD_SCRIPTS_ROOT%\PackFfu.cmd"

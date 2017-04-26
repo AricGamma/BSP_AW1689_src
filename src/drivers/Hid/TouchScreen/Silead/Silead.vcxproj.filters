@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Device.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GSLDev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GSLDev_i2c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GSLInterrupt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HidTouch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Idle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Device.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsl_point_id.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Idle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hiddesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GSL_TS_CFG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{4621150c-8c3f-45e0-838e-f58e35757c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f38567b9-5c5e-445d-a66c-1ec135af0f16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{dba2f78d-d2ea-438a-9975-f64ae83d1b04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0258da0f-efba-43c3-a50c-5e701895aa97}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="Silead.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <PkgGen Include="Package.pkg.xml">
+      <Filter>Resource Files</Filter>
+    </PkgGen>
+  </ItemGroup>
+</Project>

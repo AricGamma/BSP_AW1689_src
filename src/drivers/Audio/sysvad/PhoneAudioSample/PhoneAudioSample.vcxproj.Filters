@@ -1,0 +1,4260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;*</Extensions>
+      <UniqueIdentifier>{742B44BB-C458-4722-B2E3-29339A788AE4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <UniqueIdentifier>{E0AF48E9-5ADF-4B27-B7DC-9A58253454DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms;man;xml</Extensions>
+      <UniqueIdentifier>{3CFB896F-347B-4583-B0EB-85979B768E70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver Files">
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+      <UniqueIdentifier>{2606EE6D-DDE8-4F26-BB00-E005ED75C380}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\adapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basetopo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\kshelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\savedata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tonegenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cellulartopo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cellularwave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="handsetmictopo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="handsetspeakertopo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="michstopo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="speakerhstopo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\sysvad.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="..\hw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="..\basetopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CodecInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ContosoKeywordDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\I2SInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ihvprivatepropertyset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kshelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\savedata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sysvad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SysVadShared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ToneGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\UnittestData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+    <ClInclude Include="Cellulartopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cellulartoptable.h" />
+    <ClInclude Include="CellularWave.h" />
+    <ClInclude Include="Cellularwavtable.h" />
+    <ClInclude Include="FMTopo.h" />
+    <ClInclude Include="FMTopTable.h" />
+    <ClInclude Include="FMWave.h" />
+    <ClInclude Include="FMWavTable.h" />
+    <ClInclude Include="handsetmictopo.h" />
+    <ClInclude Include="handsetmictoptable.h" />
+    <ClInclude Include="handsetmicwavtable.h" />
+    <ClInclude Include="handsetspeakertopo.h" />
+    <ClInclude Include="handsetspeakertoptable.h" />
+    <ClInclude Include="handsetspeakerwavtable.h" />
+    <ClInclude Include="michstopo.h" />
+    <ClInclude Include="michstoptable.h" />
+    <ClInclude Include="michswavtable.h" />
+    <ClInclude Include="minipairs.h" />
+    <ClInclude Include="speakerhstopo.h" />
+    <ClInclude Include="speakerhstoptable.h" />
+    <ClInclude Include="speakerhswavtable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <PkgGen Include="Package.pkg.xml">
+      <Filter>Resource Files</Filter>
+    </PkgGen>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="PhoneAudioSample.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+</Project>

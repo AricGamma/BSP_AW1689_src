@@ -1,0 +1,107 @@
+;
+; vhfhid.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=HIDInjector ; TODO: edit Class
+ClassGuid={F655AE0A-D699-412D-9F73-6AFA3CD85C37} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=vhfhid.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=HidInjectorClassReg
+
+[HidInjectorClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+HKR,,DeviceCharacteristics,0x10001,0x100 
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GA;;;WD)"
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+vhfhid.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%vhfhid.DeviceDesc%=VhfHidDevice, ROOT\VhfHidDevice ; TODO: edit hw-id
+
+[VhfHidDevice.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+vhfhid.sys
+
+[VhfHidDevice.NT.hw]
+AddReg=VhfHidDevice_AddReg
+
+[VhfHidDevice_AddReg]
+HKR,,"LowerFilters",0x00010000,"vhf"
+
+
+;-------------- Service installation
+[VhfHidDevice.NT.Services]
+AddService = vhfhid,%SPSVCINST_ASSOCSERVICE%, vhfhid_Service_Inst
+
+; -------------- vhfhid driver install sections
+[vhfhid_Service_Inst]
+DisplayName    = %vhfhid.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\vhfhid.sys
+
+;
+;--- VhfHidDevice Coinstaller installation ------
+;
+
+;[DestinationDirs]
+;VhfHidDevice_CoInstaller_CopyFiles = 11
+
+;[VhfHidDevice.NT.CoInstallers]
+;AddReg=VhfHidDevice_CoInstaller_AddReg
+;CopyFiles=VhfHidDevice_CoInstaller_CopyFiles
+
+;[VhfHidDevice_CoInstaller_AddReg]
+;HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+;[VhfHidDevice_CoInstaller_CopyFiles]
+;WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+;[SourceDisksFiles]
+;WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+[VhfHidDevice.NT.Wdf]
+KmdfService =  vhfhid, vhfhid_wdfsect
+[vhfhid_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+
+; ================= create device node ==============
+[DeviceInstall32]
+AddDevice = ROOT\VhfHidDevice\0,,VhfHidDevice_RootDevice_Inst
+
+[VhfHidDevice_RootDevice_Inst]
+HardwareIds = ROOT\VhfHidDevice
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Allwinner" ;TODO: Replace with your manufacturer name
+ClassName="HID Injector Class"" ; TODO: edit ClassName
+DiskName = "vhfhid Installation Disk"
+vhfhid.DeviceDesc = "vhfhid Device"
+vhfhid.SVCDESC = "vhfhid Service"

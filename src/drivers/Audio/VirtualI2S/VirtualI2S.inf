@@ -1,0 +1,79 @@
+;
+; VirtualI2S.inf
+;
+
+[Version]
+Signature = "$WINDOWS NT$"
+Class = MEDIA
+ClassGuid = {4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider = %ManufacturerName%
+CatalogFile = VirtualI2S.cat
+DriverVer = ; TODO: set DriverVer in stampinf property pages
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+VirtualI2S.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard, NT$ARCH$
+
+[Standard.NT$ARCH$]
+%I2S.DeviceDesc% = I2S_Device, ACPI\AWTH0006
+
+[I2S_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+VirtualI2S.sys
+
+[I2S_Device.NT.HW]
+AddReg = Idle_Settings
+
+[Idle_Settings]
+HKR, , IdleTimeout, %REG_DWORD%, 500 ; ms
+
+;-------------- Service installation
+[I2S_Device.NT.Services]
+AddService = I2S, %SPSVCINST_ASSOCSERVICE%, I2S_Service_Inst
+
+; -------------- I2S driver install sections
+[I2S_Service_Inst]
+DisplayName    = %I2S.SVCDESC%
+ServiceType    = %SERVICE_KERNEL_DRIVER% 
+StartType      = %SERVICE_DEMAND_START% 
+ErrorControl   = %SERVICE_ERROR_NORMAL% 
+ServiceBinary  = %12%\VirtualI2S.sys
+
+;
+;--- I2S_Device Coinstaller installation ------
+;
+[I2S_Device.NT.Wdf]
+KmdfService = I2S, I2S_wdfsect
+[I2S_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+ManufacturerName = "Allwinner"
+DiskName = "I2S Installation Disk"
+I2S.DeviceDesc = "I2S Device"
+I2S.SVCDESC = "I2S Service"
+
+SPSVCINST_ASSOCSERVICE   = 0x00000002
+SERVICE_KERNEL_DRIVER    = 1
+SERVICE_BOOT_START       = 0
+SERVICE_SYSTEM_START     = 1
+SERVICE_DEMAND_START     = 3
+SERVICE_ERROR_NORMAL     = 1
+SERVICE_ERROR_IGNORE     = 0
+SERVICE_ERROR_CRITICAL   = 3
+
+REG_DWORD                = 0x00010001

@@ -1,0 +1,79 @@
+;
+; Codec.inf
+;
+
+[Version]
+Signature = "$WINDOWS NT$"
+Class = MEDIA
+ClassGuid = {4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider = %ManufacturerName%
+CatalogFile = Codec.cat
+DriverVer = ; TODO: set DriverVer in stampinf property pages
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+Codec.sys = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard, NT$ARCH$
+
+[Standard.NT$ARCH$]
+%Codec.DeviceDesc%  =Codec_Device, ACPI\AWTH0007
+
+[Codec_Device.NT]
+CopyFiles = Drivers_Dir
+
+[Drivers_Dir]
+Codec.sys
+
+[Codec_Device.NT.HW]
+AddReg = Idle_Settings
+
+[Idle_Settings]
+HKR, , IdleTimeout, %REG_DWORD%, 500 ; ms
+
+;-------------- Service installation
+[Codec_Device.NT.Services]
+AddService = Codec, %SPSVCINST_ASSOCSERVICE%, Codec_Service_Inst
+
+; -------------- Codec driver install sections
+[Codec_Service_Inst]
+DisplayName    = %Codec.SVCDESC%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\Codec.sys
+
+;
+;--- Codec_Device Coinstaller installation ------
+;
+[Codec_Device.NT.Wdf]
+KmdfService = Codec, Codec_wdfsect
+[Codec_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+ManufacturerName = "Allwinner"
+DiskName = "Codec Installation Disk"
+Codec.DeviceDesc = "Codec Device"
+Codec.SVCDESC = "Codec Service"
+
+SPSVCINST_ASSOCSERVICE   = 0x00000002
+SERVICE_KERNEL_DRIVER    = 1
+SERVICE_BOOT_START       = 0
+SERVICE_SYSTEM_START     = 1
+SERVICE_DEMAND_START     = 3
+SERVICE_ERROR_NORMAL     = 1
+SERVICE_ERROR_IGNORE     = 0
+SERVICE_ERROR_CRITICAL   = 3
+
+REG_DWORD                = 0x00010001

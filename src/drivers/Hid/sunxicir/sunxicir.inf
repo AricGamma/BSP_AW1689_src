@@ -1,0 +1,83 @@
+;
+; sunxicir.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: edit Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=sunxicir.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Class section =====================
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+sunxicir.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%sunxicir.DeviceDesc%=sunxicir_Device, ACPI\AWTH0213 ; TODO: edit hw-id
+
+[sunxicir_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+sunxicir.sys
+
+;-------------- Service installation
+[sunxicir_Device.NT.Services]
+AddService = sunxicir,%SPSVCINST_ASSOCSERVICE%, sunxicir_Service_Inst
+
+; -------------- sunxicir driver install sections
+[sunxicir_Service_Inst]
+DisplayName    = %sunxicir.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\sunxicir.sys
+
+;
+;--- sunxicir_Device Coinstaller installation ------
+;
+
+;[DestinationDirs]
+;sunxicir_Device_CoInstaller_CopyFiles = 11
+
+;[sunxicir_Device.NT.CoInstallers]
+;AddReg=sunxicir_Device_CoInstaller_AddReg
+;CopyFiles=sunxicir_Device_CoInstaller_CopyFiles
+
+;[sunxicir_Device_CoInstaller_AddReg]
+;HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+;[sunxicir_Device_CoInstaller_CopyFiles]
+;WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+;[SourceDisksFiles]
+;WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+;[sunxicir_Device.NT.Wdf]
+;KmdfService =  sunxicir, sunxicir_wdfsect
+;[sunxicir_wdfsect]
+;KmdfLibraryVersion = $KMDFVERSION$
+
+
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Allwinner" ;TODO: Replace with your manufacturer name
+DiskName = "sunxicir Installation Disk"
+sunxicir.DeviceDesc = "sunxicir Device"
+sunxicir.SVCDESC = "sunxicir Service"

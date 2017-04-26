@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\kdextension.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ufndbg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\usbfnb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\usbfnmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\udc\sunxi_udc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\udc\sunxi_udc_board.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\udc\sunxi_udc_dma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\usbc\usbc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\usbc\usbc_dev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\usbc\usbc_phy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sunxi_usb\usbc\usbc_resource.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usb\inc\KdNetUsbFn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\KdNetUsbFnB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\KdNetUsbFnMp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\KdNetUsbFnMpSynopsys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\kdcom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\kdnetextensibility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\kdnetshareddata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\KdNetUsbFnMpSunxi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\sunxi_udc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\sunxi_usb_board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\sunxi_usb_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\sunxi_usb_debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\sunxi_usb_typedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\usb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\udc\sunxi_udc_board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\udc\sunxi_udc_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\udc\sunxi_udc_dma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\usbc\usbc_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\KdNetUsbFnMpChipidea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\poison.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\ch9.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sunxi_usb\include\errno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\inc\sunxi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <PkgGen Include="Package.pkg.xml">
+      <Filter>Resource Files</Filter>
+    </PkgGen>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kdnet-over-usb.def">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,63 @@
+;
+;sunxii2c.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%MSFT%
+DriverVer=06/21/2006,6.1.7779.2
+CatalogFile = Spbi2c.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Class section =====================
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+sunxii2c.sys  = 1,,
+
+;*****************************************
+; sunxii2c  Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=Standard,NT$ARCH$
+
+; Decorated model section take precedence over undecorated 
+; ones on XP and later.
+[Standard.NT$ARCH$]
+%sunxii2c.DeviceDesc%=sunxii2c_Device, ACPI\AWTH0002
+
+[sunxii2c_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+sunxii2c.sys
+
+
+;-------------- Service installation
+[sunxii2c_Device.NT.Services]
+AddService = sunxii2c,%SPSVCINST_ASSOCSERVICE%, sunxii2c_Service_Inst
+
+; -------------- sunxii2c driver install sections
+[sunxii2c_Service_Inst]
+DisplayName    = %sunxii2c.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\sunxii2c.sys
+LoadOrderGroup = Base
+Dependencies   = SpbCx
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+MSFT = "Allwinner"
+StdMfg = "(Standard system devices)"
+DiskId1 = "sunxiI2C Controller Installation Disk #1"
+sunxii2c.DeviceDesc = "Sunxi I2C Controller Driver"
+sunxii2c.SVCDESC = "Sunxi I2C Controller Service"

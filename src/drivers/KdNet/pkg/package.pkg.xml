@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Make sure to set the Package attributes -->
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"
+  Owner="Allwinner"
+  OwnerType="OEM"
+  Platform="aw1689"
+  Component="aw1689"
+  SubComponent="$(TARGETNAME)"
+  ReleaseType="Production" >
+
+  <Components>
+    <OSComponent>
+      <Files>
+        <!-- For kernel mode drivers, $(DRIVER_DEST) evaluates to "drivers" by default -->
+        <!-- For user mode drivers, $(DRIVER_DEST) evaluates to "drivers\umdf" by default -->
+        <File Source=".\$(TARGETNAME)$(TARGETEXT)" DestinationDir="$(runtime.system32)" />
+      </Files>
+    </OSComponent>
+  </Components>
+</Package>
