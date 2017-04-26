@@ -148,6 +148,6 @@ ffu生成成功后，可以在`.\loong\ffu`目录下找到对应设备的.ffu文
 
 2. Realtek RTK8723 wifi信号和传输速度较差
 
-3. 以太网有概率丢包
+3. BPI-M64以太网驱动，无法枚举到PHY
 
 如果您有其他问题或建议，欢迎与我们联系： [zhangliwei@allwinnertech.com](mailto:zhangliwei@allwinnertech.com)
