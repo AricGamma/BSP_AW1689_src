@@ -32,7 +32,8 @@
   <Features>
     <Microsoft> 
 	
-    <Feature>IOT_EFIESP</Feature>
+    <!--<Feature>IOT_EFIESP</Feature>-->
+    <Feature>IOT_EFIESP_TEST</Feature>
     <Feature>IOT_EFIESP_BCD</Feature>
     <Feature>IOT_DMAP_DRIVER</Feature> 
     <Feature>PRODUCTION_CORE</Feature> 
