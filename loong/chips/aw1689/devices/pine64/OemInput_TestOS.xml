@@ -77,6 +77,12 @@
     <Feature>IOT_SHELL_HOTKEY_SUPPORT</Feature>
 	<Feature>IOT_APPLICATIONS</Feature>
 	<Feature>IOT_ENABLE_ADMIN</Feature>
+	
+	<!-- RS2 Additions -->
+    <Feature>IOT_HWN_CLASS_EXTENSION</Feature>
+    <Feature>IOT_USBFN_CLASS_EXTENSION</Feature>
+	<Feature>IOT_SHELL_ONSCREEN_KEYBOARD</Feature>
+    <Feature>IOT_CORTANA</Feature>
     
 </Microsoft> 
 <OEM> 
