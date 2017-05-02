@@ -1,153 +1,136 @@
-# Windows 10 IoT for Allwinner
+# Windows 10 IoT BSP for Allwinner aw1689(A64) SoC
 
 ---
 
 ## Introduction
 
-本项目主要介绍如何在Allwinner平台下，开发、定制、打包Windows 10 IoT Core镜像。  
-项目主要包含：
+This project introduces how to develop, build, customize and package a Windows 10 IoT Core BSP for boards based on Allwinner aw1689(A64) SoC.
+Main contents:
+1. Source code of kernel drivers
+2. Source code of default UWP app
+3. UEFI binaries for boot
+4. Scripts for compiling, packaging and building `.ffu` image
+5. FeatureManifest configration files for building `.ffu` image
 
-1. 内核驱动源代码
-2. UWP app 示例代码
-3. 用于BOOT的UEFI二进制文件
-4. 生成ffu镜像的脚本和FeatureManifest配置文件
+## Directory
 
-## 主要内容:
+- [1. Directory Tree](#1)
+- [2. How to Build](#2)
+- [3. How to Deploy](#3)
+- [4. Known Issues](#4)
 
-- [1. 目录结构](#1)
-- [2. 如何构建](#2)
-- [3. 如何部署](3)
-- [4. 更新内容](#4)
-- [5. 已知问题](#5)
-
-<h2 id="1">1. 目录结构</h2>
+<h2 id="1">1. Directory Tree</h2>
 
         Root
-          |-- .\loong                                         包含打包脚本和配置文件以及生成cab包和ffu镜像的目录
-          *    |-- .\chips                                    包含特定CPU平台的配置文件和启动配置文件(BCD)
-          *    *    |-- .\aw1689                              Allwinner A64平台目录
+          |-- .\loong                                         Contains scipts&configuration files for building ffu
+          *    |-- .\chips                                    
+          *    *    |-- .\aw1689                              aw1689(A64) model
           *    *    *    |-- .\bin    
-          *    *    *    *    |-- .\EFI                       启动配置文件(BCD)
-          *    *    *    *    |-- *.bin                       过期的二进制文件
-          *    *    *    |-- .\boot-resource                  boot资源文件(已过期)
-          *    *    *    |-- .\devices                        不同设备的feature manifest和ACPI表
-          *    *    *    *    |-- .\BPI-M64                   BananaPi M64开发板的配置文件
-          *    *    *    *    *    |-- .\acpi                 包含acpi相关配置和生成目录
-          *    *    *    *    *    *    |-- .\ACPI            ACPI生成目录
-          *    *    *    *    *    *    |-- .\inc             包含目录
-          *    *    *    *    *    *    |-- .\src             源文件目录
-          *    *    *    *    *    |-- .\logo                 boot阶段显示logo
-          *    *    *    *    *    |-- DeviceFM.xml           设备feature manifest
-          *    *    *    *    *    |-- DeviceInfo.pkg.xml     设备信息打包文件
-          *    *    *    *    *    |-- DeviceLayout.xml       设备分区信息
-          *    *    *    *    *    |-- DevicePlatform.xml     平台信息
-          *    *    *    *    *    |-- OemInput_RetailOS.xml  用于打包RetailOS的FM文件
-          *    *    *    *    *    |-- OemInput_TestOS.xml    用于打包TestOS的FM文件
-          *    *    *    *    |-- .\default                   aw1689平台通用配置文件
-          *    *    *    *    |-- .\dingdong                  内部测试开发板
-          *    *    *    *    |-- .\perf2_v1_0                内部测试开发板
-          *    *    *    *    |-- .\pine64                    Pine64开发板的配置文件
-          *    *    *    *    |-- .\r18                       内部测试板
-          *    *    *    |-- .\tools                          一些工具(已过期)
-          *    |-- .\common                                   过期的文件
-          *    |-- .\ffu                                      ffu生成目录
-          *    |-- .\pctools                                  包含编译、打包、debug、烧写UEFI等脚本工具
-          *    *    |-- .\linux                               linux下的一些脚本工具(已过期)
-          *    *    |-- .\windows                             windows下使用的脚本和工具
-          *    *    *    |-- .\acpi                           acpi提取工具
-          *    *    *    *    |-- .\acpi_extract.exe          acpi提取工具
-          *    *    *    |-- .\buildscripts                   编译驱动和app、打包ffu脚本目录(由Build.cmd调用)
-          *    *    *    *    |-- .\iot-adk-addonkit          引用自(https://github.com/ms-iot/iot-adk-addonkit)
-          *    *    *    *    |-- BuildAllAppx.cmd            编译位于.\src\app目录下的所有app
-          *    *    *    *    |-- BuildAllComponent.cmd       编译所有组件
-          *    *    *    *    |-- BuildBootloader.cmd         编译bootloader(已过期)
-          *    *    *    *    |-- BuildWindowsDrivers.cmd     编译驱动并生成cab包
-          *    *    *    *    |-- PackAppx.cmd                将编译好的app打包成cab包
-          *    *    *    *    |-- PackBootloader.cmd          打包bootloader
-          *    *    *    *    |-- PackBootresource.cmd        将启动资源文件打包成cab包
-          *    *    *    *    |-- PackDeviceConfigs.cmd       将设备配置文件打包成cab包
-          *    *    *    *    |-- PackFfu.cmd                 生成ffu镜像
-          *    *    *    |-- .\UefiUpgrade                    安全地更新UEFI的脚本工具
-          *    *    *    |-- .\VirEth                         虚拟以太网与USB桥接工具(用于debug)
-          *    *    *    *    |-- VirEth_TH2.exe              For Build 10586 1511
-          *    *    *    *    |-- VirEth_RS1.exe              For Build 14393 1607
-          *    |-- .\prebuilt                                 包含生成的cab包和UEFI二进制文件，用于构建ffu
-          *    *    |-- .\aw1689                              Allwinner A64平台目录
-          *    *    *    |-- .\CabPackages                    平台通用cab包生成目录
-          *    *    *    |-- .\devices                        同CPU平台不同设备的cab包生成目录
-          |-- .\src                                           驱动和示例app的源代码
-          *    |-- .\app                                      UWP app示例源代码
-          *    |-- .\build                                    包含所有driver工程的统一解决方案(.sln)以及驱动生成目录
-          *    |-- .\drivers                                  所有驱动工程的源代码
-          |-- Build.cmd                                       打包流程入口脚本
-          |-- SetBuildEnv.cmd                                 设置必要的环境变量(由Build.cmd调用)
+          *    *    *    *    |-- .\EFI                       Boot Configuration Data(BCD)
+          *    *    *    *    |-- *.bin                       Legacy binaries
+          *    *    *    |-- .\boot-resource                  boot resources(legacy)
+          *    *    *    |-- .\devices                        Feature manifest & ACPI table
+          *    *    *    *    |-- .\BPI-M64                   Configurations for BananaPi M64
+          *    *    *    *    *    |-- .\acpi                 ACPI source code and generation directory
+          *    *    *    *    *    *    |-- .\ACPI            ACPI generation directory
+          *    *    *    *    *    *    |-- .\inc             Includes
+          *    *    *    *    *    *    |-- .\src             Source code
+          *    *    *    *    *    |-- .\logo                 Logo shown when boot
+          *    *    *    *    *    |-- DeviceFM.xml           Main device feature manifest(FM)
+          *    *    *    *    *    |-- DeviceInfo.pkg.xml     Pkg for device information
+          *    *    *    *    *    |-- DeviceLayout.xml       Partion configuration
+          *    *    *    *    *    |-- DevicePlatform.xml     Platform information
+          *    *    *    *    *    |-- OemInput_RetailOS.xml  FM file for building retail image
+          *    *    *    *    *    |-- OemInput_TestOS.xml    FM file for building test image
+          *    *    *    *    |-- .\default                   Common configurations and ACPI for aw1689 platform
+          *    *    *    *    |-- .\dingdong                  Test-inside board model
+          *    *    *    *    |-- .\perf2_v1_0                Test-inside board model
+          *    *    *    *    |-- .\pine64                    Pine64 board
+          *    *    *    *    |-- .\r18                       Test-inside board model
+          *    *    *    |-- .\tools                          Some tools(legacy)
+          *    |-- .\common                                   Some common files(legacy)
+          *    |-- .\ffu                                      Directory for image generation
+          *    |-- .\pctools                                  Scripts & tools for compiling, packaging and deploying
+          *    *    |-- .\linux                               Scripts and tools in Linux(legacy)
+          *    *    |-- .\windows                             Scripts and tools in Windows
+          *    *    *    |-- .\acpi                           
+          *    *    *    *    |-- .\acpi_extract.exe          Tools for extracting acpi
+          *    *    *    |-- .\buildscripts                   
+          *    *    *    *    |-- .\iot-adk-addonkit          Reference from (https://github.com/ms-iot/iot-adk-addonkit)
+          *    *    *    *    |-- BuildAllAppx.cmd            Build apps under .\src\app directory
+          *    *    *    *    |-- BuildAllComponent.cmd       Build all component
+          *    *    *    *    |-- BuildBootloader.cmd         Build bootloader(unused)
+          *    *    *    *    |-- BuildWindowsDrivers.cmd     Build drivers and generate cabs
+          *    *    *    *    |-- PackAppx.cmd                Generate cabs for appx
+          *    *    *    *    |-- PackBootloader.cmd          Package bootloader
+          *    *    *    *    |-- PackBootresource.cmd        Package resources for boot
+          *    *    *    *    |-- PackDeviceConfigs.cmd       Package configuration files of device
+          *    *    *    *    |-- PackFfu.cmd                 Generate ffu image
+          *    *    *    |-- .\UefiUpgrade                    Update UEFI binary separately
+          *    *    *    |-- .\VirEth                         Debug tools for bridging virtual ethernet and USB
+          *    *    *    *    |-- VirEth_TH2.exe              For Build 10586 1511 and previous version
+          *    *    *    *    |-- VirEth_RS1.exe              For Build 14393 1607 and later version
+          *    |-- .\prebuilt                                 Contains generated cabs and UEFI binaries for building ffu image
+          *    *    |-- .\aw1689                              Allwinner (aw1689)A64
+          *    *    *    |-- .\CabPackages                    Common packages for aw1689 platform
+          *    *    *    |-- .\devices                        Packages for differnent boards based on aw1689
+          |-- .\src                                           Drivers and sample app source code
+          *    |-- .\app                                      Source code of default headed app
+          *    |-- .\build                                    Solution file of all driver projects
+          *    |-- .\drivers                                  Source code of drivers
+          |-- Build.cmd                                       Build entry
+          |-- SetBuildEnv.cmd                                 Set environment variables for building(called by Build.cmd)
 
+<h2 id="2">2. How to Build</h2>
 
-<h2 id="2">2. 如何构建</h2>
+### 1. Preparation before building
 
-### 1. 构建前的准备
+(1). Update OS of your PC to Windows 10 1703(build 15063) and ensure that there is enough space to install visual studio, WDK, SDK and ADK in your system partion(50GB at least).
 
-(1). 将您的操作系统升级至1607版本(Build 14393)，并确保系统盘可用空间在50GB以上
+(2). Install [Visual Studio 2015](https://www.visualstudio.com)
 
-(2). 安装[Visual Studio 2015](https://www.visualstudio.com)
+> PS: Please check Universal Windows App Development Tools and its sub options and don't change the location for installation.
 
-> PS: 安装时请勾选Universal Windows App Development Tools及其子项；请不要修改安装路径。
+(3). Install [Windows 10 Driver Kits(WDK)](https://developer.microsoft.com/zh-cn/windows/hardware/windows-driver-kit)
 
-(3). 安装 [Windows 10 driver kits(WDK)](https://developer.microsoft.com/zh-cn/windows/hardware/windows-driver-kit)
+(4). Install [Windows ADK for Windows 10](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)
 
-(4). 安装 [Windows ADK for Windows 10](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)
+(5). Install [Windows 10 IoT Core Kits iso](https://msdn.microsoft.com/subscriptions/json/GetDownloadRequest?brand=MSDN&locale=en-us&fileId=72005&activexDisabled=true&akamaiDL=false) in MSDN subscription center.
 
-(5). 安装 [Windows 10 IoT Kits iso](https://msdn.microsoft.com/subscriptions/json/GetDownloadRequest?brand=MSDN&locale=zh-cn&fileId=70177&activexDisabled=false&akamaiDL=false)
+> PS: You need an account with msdn subscription
 
-> PS: 需要msdn订阅账户才能下载。
+### 2. Compile drivers
 
-### 2. 编译驱动文件
+Run Visual Studio as Administrator. Select "File -> Open -> Project/Solution" in menu and select `.\src\build\aw1689.sln` solution file in explorer. Build solution and find generated drivers and cabs under `.\src\build\ARM` directory.
 
-以管理员身份打开Visual Studio 2015，点击菜单中的"文件 -> 打开 -> 项目/解决方案"，选择`.\src\build\aw1689.sln`解决方案文件。打开解决方案后，在菜单中选择"生成 -> 生成解决方案"，等待生成成功后，可以在`.\src\build\ARM`目录下，对应Debug/Release目录下找到所有生成成功的驱动文件和驱动cab包。  
+Learn how to develop Windows driver, please visit [here](https://msdn.microsoft.com/windows/hardware/drivers/develop/getting-started-with-universal-drivers) and [samples on github](https://github.com/Microsoft/Windows-driver-samples).
 
-学习如何开发Windows通用驱动程序，请访问 [这里](https://msdn.microsoft.com/windows/hardware/drivers/develop/getting-started-with-universal-drivers)或者查看github上的 [样例代码](https://github.com/Leeway213/Windows-driver-samples)。
+### 3. Build default app(UWP)
 
-### 3. 编译Windows通用应用(UWP)
+Open `.\src\app\IoTDefaultApp\IoTCoreDefaultApp.sln` with Visual Studio and build solution.
 
-打开Visual Studio 2015，点击菜单中的"文件 -> 打开 -> 项目/解决方案"，选择`.\src\app\IoTDefaultAppIoTCoreDefaultApp.sln`解决方案文件。打开工程后，在菜单中选择"生成 -> 生成解决方案"，等待生成成功后，可以在`.\src\app\IoTDefaultApp\IoTCoreDefaultApp\bin\ARM\[Debug/Release]\`目录下，找到生成的应用的二进制文件。  
+Learn how to develop apps for Universal Windows Platform, please visit [here](https://developer.microsoft.com/zh-cn/windows/apps/getstarted) and [samples on github](https://github.com/ms-iot/samples).
 
-学习如何在Windows 10 IoT Core上开发Windows通用应用程序(UWP), 请访问 [这里](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#tooling)或查看github上的 [样例代码](https://github.com/Leeway213/samples)。
+### 4. Generate ffu image
 
-### 4. 生成操作系统ffu镜像
+Learn how to customize your IoT Core image, please visit [here](https://msdn.microsoft.com/zh-cn/windows/hardware/commercialize/manufacture/iot/index).
 
-学习如何构建自己的IoT Core ffu，可以访问 [这里](https://msdn.microsoft.com/zh-cn/windows/hardware/commercialize/manufacture/iot/index)。  
+For your easy reference, we provide a serious of scripts to help to generate ffu. You can just run `Build.cmd` under root directory of the project and type a right number to excute any compiling or building operations.
 
-为简化生成ffu操作，我们构建了一系列脚本，以帮助您更简单的生成ffu。只需要运行项目根目录下的Build.cmd脚本，输入数字选择对应的选项即可执行相应的生成操作。  
+> For example: Type "1" to build all drivers and apps and package ffu image.
 
-> 例如：输入"1"，即编译生成所有的驱动和应用程序，并打包ffu。  
+**<font color="red">Attention: Before excuting the operation of generating ffu, ensure that you have remove all mass storage devices(USB disks or SD card) from your computer again and again. Because the `dism.exe` called by script will destroy your data in these devices!</font>**
 
-事实上，Build.cmd首先调用SetBuildEnv.cmd脚本设置了一系列环境变量，通过输入数字选项，调用`.\loong\pctools\windows\buildscripts`目录下对应的cmd脚本。  
+After ffu generation complete, you can get the `.ffu` image file under `.\loong\ffu` for your board.
 
-**<font color="red">需要注意的一点是：在执行打包ffu过程前，请再三确保拔出所有连接在PC上的大容量存储设备，如U盘、SD卡等！否则，打包程序会彻底销毁您的数据！</font>**
+> To change a board model, please modify the `DeviceName` variable in `SetBuidEnv.cmd` script.(Pine64 or BPI-M64)
 
-ffu生成成功后，可以在`.\loong\ffu`目录下找到对应设备的.ffu文件。  
+<h2 id="3">3. How to Deploy</h2>
 
-> PS: 在SetBuildEnv.cmd脚本中，默认设置的生成设备为pine64开发板，如果想要生成其他已支持的开发板，请打开SetBuildEnv.cmd脚本，修改`set DeviceName=pine64`这一行，设置成你想要生成的设备名称。  
-目前已支持的设备有：pine64开发板、BananaPi M64开发板以及Allwinner内部测试的一些开发板。
+Please refer to [How to Flash FFU](https://github.com/Leeway213/Win10-IoT-for-A64-Release-Notes/blob/master/doc/How%20to%20flash%20ffu.md).
 
-<h2 id="3">3. 如何部署</h2>
+<h2 id="4">4. Known Issues</h2>
 
-请参考文档 [How to flash ffu](https://github.com/Leeway213/Win10-IoT-for-A64-Release-Notes/blob/master/doc/How%20to%20flash%20ffu.md)。
-
-
-<h2 id="4">4. 更新内容</h2>
-
-**[2017-04-26]:**  
-
-          第一次上传
-
-
-<h2 id="5">5. 已知问题</h2>
-
-1. 无法软件重启、关闭操作系统，执行关闭或重启操作时，操作系统会蓝屏，错误代码：0x0000000a
-
-2. Realtek RTK8723 wifi信号和传输速度较差
-
-3. BPI-M64以太网驱动，无法枚举到PHY
-
-如果您有其他问题或建议，欢迎与我们联系： [zhangliwei@allwinnertech.com](mailto:zhangliwei@allwinnertech.com)
+1. Blue screen with error code: 0x0000000a when shuting down or rebooting caused by a PnP bug in audio drivers.
+2. WiFi Rx Delay caused by an SDIO issue.
+3. A communication problem between EMAC and RTL8211 PHY on Banana Pi M64 board.
