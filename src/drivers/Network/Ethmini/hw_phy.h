@@ -92,7 +92,8 @@ typedef enum _PHY_TYPE
 typedef ULONG PHYID;
 
 typedef struct _PHY_MODEL
-{
+{
+
 	PHYID Id;
 	ULONG Model;
 	ULONG Rev;
@@ -124,5 +125,6 @@ NDIS_STATUS HW_Phy_Write(PHY *Phy, PHYID PhyID, ULONG Address, ULONG value);
 NDIS_STATUS HW_Phy_Set_Mode(PHY *Phy, PHYID PhyID);
 NDIS_STATUS HW_Phy_Wait_Link_Up(PHY *Phy, PHYID PhyID);
 NDIS_STATUS HW_Phy_Dump_Status(PHY *Phy, PHYID PhyID);
+VOID HW_Phy_Check_Link_Up(PHY *Phy, PHYID PhyId, BOOLEAN* LinkUp);
 
 #endif

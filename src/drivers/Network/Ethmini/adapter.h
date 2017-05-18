@@ -75,6 +75,9 @@ typedef struct _MP_ADAPTER
     PDEVICE_OBJECT          Pdo;
     PDEVICE_OBJECT          Fdo;
     PDEVICE_OBJECT          NextDeviceObject;
+	
+	NDIS_HANDLE				LinkStateQueryTimer;
+	BOOLEAN					LinkUp;
 
     NDIS_HANDLE             AdapterHandle;
 
@@ -296,3 +299,5 @@ MINIPORT_DEVICE_PNP_EVENT_NOTIFY    MPDevicePnpEventNotify;
 MINIPORT_SHUTDOWN                   MPShutdownEx;
 MINIPORT_CANCEL_OID_REQUEST         MPCancelOidRequest;
 
+NDIS_TIMER_FUNCTION LinkStateEvtTimerFunc;
+NDIS_STATUS NotifyLinkStateChange(NDIS_HANDLE AdapterHandle, NDIS_STATUS StatusCode);

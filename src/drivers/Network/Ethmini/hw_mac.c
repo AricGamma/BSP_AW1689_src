@@ -18,7 +18,7 @@ NDIS_STATUS HW_MAC_Init(PHWADAPTER PhyAdapter, PMAC Mac)
 	
 	CHKSTATUS(HW_Init_Phy_Interface(Mac, &Mac->Phy), 0);
 	CHKSTATUS(HW_Mac_Reset(Mac, 100), 0);
-	// ToDO, Get LINK mode from Registry
+	 //ToDO, Get LINK mode from Registry
 	HW_Mac_Set_Mode(Mac, CTL0_SPEED_100M | CTL0_LOOPBACK_DIS | CTL0_DUPLEX_FULL);
 	HW_Mac_Config_Transmit(Mac, SF_DMA_MODE, SF_DMA_MODE);
 	HW_Mac_Set_Mac_Address(Mac, PhyAdapter->Adapter->CurrentAddress, 0);
@@ -26,7 +26,7 @@ NDIS_STATUS HW_MAC_Init(PHWADAPTER PhyAdapter, PMAC Mac)
 		|GETH_FRAME_FILTER_RA  | GETH_FRAME_FILTER_PR 			// All
 		);
 
-	HW_Mac_Enable(Mac);
+	//HW_Mac_Enable(Mac);
 	
 
 Exit:

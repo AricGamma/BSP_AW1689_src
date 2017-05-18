@@ -195,12 +195,20 @@ Return Value:
 				DEBUGP(MP_ERROR, "Failed to map physcial memory space.\n");
         		goto Exit;
 			}
+
+
 			//
 			// Initialize the hardware with mapped resources
 			//
 
 			// Init HW MAC and PHY interface
 			Status = HW_MAC_Init(PhyAdapter, &PhyAdapter->Mac);
+			//PhyAdapter->Mac.RegisterBase = PhyAdapter->Register.VirtualBase;
+			//ASSERT(PhyAdapter->Mac.RegisterBase);
+			//CHKSTATUS(HW_Mac_Wait_Reset_Clear(&PhyAdapter->Mac, 100), 0);
+			//CHKSTATUS(HW_Mac_Reset(&PhyAdapter->Mac, 100), 0);
+
+			//Status = HW_Init_Phy_Interface(&PhyAdapter->Mac, &PhyAdapter->Mac.Phy);
 			if(Status != NDIS_STATUS_SUCCESS)
 			{
 				DEBUGP(MP_ERROR, "Failed to Init Hardware.\n");
