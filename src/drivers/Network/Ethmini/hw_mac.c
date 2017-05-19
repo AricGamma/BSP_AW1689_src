@@ -9,6 +9,9 @@ NDIS_STATUS HW_MAC_Init(PHWADAPTER PhyAdapter, PMAC Mac)
 	
 	Mac->RegisterBase = PhyAdapter->Register.VirtualBase;
 	ASSERT(Mac->RegisterBase);
+
+	//Set MDIO & MDC GPIO to right function
+	CHKSTATUS(HW_MAC_Set_Mdio_Pin_Function(PhyAdapter), 0);
 	
 	// Wait HW reset is finished
 	CHKSTATUS(HW_Mac_Wait_Reset_Clear(Mac, 100), 0);
@@ -299,4 +302,20 @@ VOID HW_MAC_Start_DMA_Transfer(PMAC Mac, BOOLEAN Tx)
 	HW_Mac_Write(Mac, TransCtlAddr, value);
 }
 
+
+NDIS_STATUS HW_MAC_Set_Mdio_Pin_Function(PHWADAPTER PhyAdapter)
+{
+	NDIS_STATUS Status = NDIS_STATUS_SUCCESS;
+
+	ULONG value;
+	ULONG newValue;
+
+	value = READ_REGISTER_ULONG((PULONG)PhyAdapter->MdioPinRegister.VirtualBase);
+
+	newValue = value & 0xFFFFFF | MDC_PORT_SEL | MDIO_PORT_SEL;
+
+	WRITE_REGISTER_ULONG((PULONG)PhyAdapter->MdioPinRegister.VirtualBase, newValue);
+
+	return Status;
+}
 

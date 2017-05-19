@@ -40,6 +40,12 @@ typedef struct _ADAPTER_HW
         ULONG Length;
     } Register;
 
+	struct {
+		PHYSICAL_ADDRESS PhysicalBase;
+		PVOID VirtualBase;
+		ULONG Length;
+	} MdioPinRegister;
+
 	NDIS_HANDLE                 InterruptHandle;
 	ULONG						IntStatus;
 

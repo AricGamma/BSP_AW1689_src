@@ -242,11 +242,12 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             Name(_UID, 0x0)              
             Method (_STA, 0, NotSerialized) 
             {
-                Return (0x00)
+                Return (0x0F)
             }      
             Name(_CRS, ResourceTemplate ()
             {
                 MEMORY32FIXED(ReadWrite, 0x01c30000, 0x10000, ) 
+                MEMORY32FIXED(ReadWrite, 0x01c20874, 0x4,)
                 Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {114}
             })
             

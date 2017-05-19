@@ -4,6 +4,23 @@
 /******************************************************************************
  *	Registers
  *****************************************************************************/
+
+#define CCU_REGISTER_BASE	0x01C20000
+
+#define AHB2_CLK_CFG		0x005C
+
+#define CLK_GATING_REG0		0x0060
+#define EMAC_GATING_OFFSET	17
+
+#define SW_RESET_REG0		0x02C0
+#define EMAC_RESET_OFFSET	17
+
+#define PORT_CTRL_BASE		0x01C20800
+#define PD_CFG_REG2_OFFSET	0x74
+#define MDC_PORT_SEL		4 << 24
+#define MDIO_PORT_SEL		4 << 28
+
+
 #define GETH_BASIC_CTL0		0x00
 #define GETH_BASIC_CTL1		0x04
 #define GETH_INT_STA		0x08
@@ -83,6 +100,7 @@ NDIS_STATUS HW_Mac_Enable(PMAC Mac);
 NDIS_STATUS HW_Mac_Disable(PMAC Mac);
 VOID HW_MAC_Start_Stop_DMA(PMAC Mac, BOOLEAN Start, BOOLEAN Tx, ULONG DmaAddr);
 VOID HW_MAC_Start_DMA_Transfer(PMAC Mac, BOOLEAN Tx);
+NDIS_STATUS HW_MAC_Set_Mdio_Pin_Function(struct _ADAPTER_HW *PhyAdapter);
 
 __forceinline
 VOID HW_Mac_Int_Enable(PMAC Mac)

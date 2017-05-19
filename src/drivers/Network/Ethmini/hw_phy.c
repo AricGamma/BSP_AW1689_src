@@ -258,4 +258,3 @@ NDIS_STATUS HW_Phy_Write(PHY *Phy, PHYID PhyID, ULONG Address, ULONG value)
 
 	return Status;
 }
-
