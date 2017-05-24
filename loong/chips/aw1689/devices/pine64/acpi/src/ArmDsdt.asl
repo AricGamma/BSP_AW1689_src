@@ -277,6 +277,7 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             Name(_CRS, ResourceTemplate ()
             {
                 MEMORY32FIXED(ReadWrite, 0x01c30000, 0x10000, ) 
+                MEMORY32FIXED(ReadWrite, 0x01c20874, 0x4,)
                 Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {114}
             })
             

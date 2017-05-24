@@ -278,6 +278,7 @@ Return Value:
 {
     NDIS_STATUS Status = NDIS_STATUS_SUCCESS;
     PMP_GLOBAL Global = (PMP_GLOBAL)DriverContext;
+	NDIS_MINIPORT_PNP_CHARACTERISTICS pnpChar;
 
     DEBUGP(MP_TRACE, "---> MPSetOptions\n");
     UNREFERENCED_PARAMETER(DriverHandle);
@@ -288,6 +289,13 @@ Return Value:
     // Set any optional handlers by filling out the appropriate struct and
     // calling NdisSetOptionalHandlers here.
     //
+	NdisZeroMemory(&pnpChar, sizeof(NDIS_MINIPORT_PNP_CHARACTERISTICS));
+
+	pnpChar.Header.Type = NDIS_OBJECT_TYPE_MINIPORT_PNP_CHARACTERISTICS;
+	pnpChar.Header.Revision = NDIS_MINIPORT_PNP_CHARACTERISTICS_REVISION_1;
+	pnpChar.Header.Size = NDIS_SIZEOF_MINIPORT_PNP_CHARACTERISTICS_REVISION_1;
+
+
 
 
     DEBUGP(MP_TRACE, "<--- MPSetOptions Status = 0x%08x\n", Status);

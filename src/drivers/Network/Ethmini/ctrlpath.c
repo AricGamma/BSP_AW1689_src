@@ -224,6 +224,9 @@ Return Value:
 
     switch(Query->Oid)
     {
+		case OID_GEN_MEDIA_CONNECT_STATUS:
+			DbgPrintEx(1, 0, "get media connect status query OID\n");
+		break;
         case OID_GEN_HARDWARE_STATUS:
             //
             // Specify the current hardware status of the underlying NIC as

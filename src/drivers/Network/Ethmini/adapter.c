@@ -149,6 +149,7 @@ MPInitializeEx(
 
 
 	DEBUGP(MP_TRACE, "---> MPInitializeEx\n");
+	DbgPrintEx(1, 0, "----> MPInitializeEx\n");
 	UNREFERENCED_PARAMETER(MiniportDriverContext);
 	PAGED_CODE();
 
@@ -277,7 +278,8 @@ MPInitializeEx(
 		AdapterGeneral.XmitLinkSpeed = Adapter->ulLinkSendSpeed;
 		AdapterGeneral.MaxRcvLinkSpeed = Adapter->ulLinkRecvSpeed;
 		AdapterGeneral.RcvLinkSpeed = Adapter->ulLinkRecvSpeed;
-		AdapterGeneral.MediaConnectState = MediaConnectStateConnected;//HWGetMediaConnectStatus(Adapter);
+		//AdapterGeneral.MediaConnectState = MediaConnectStateConnected;//HWGetMediaConnectStatus(Adapter);
+		AdapterGeneral.MediaConnectState = MediaConnectStateUnknown;//HWGetMediaConnectStatus(Adapter);
 		AdapterGeneral.MediaDuplexState = MediaDuplexStateFull;
 
 		//
@@ -387,29 +389,33 @@ MPInitializeEx(
 			break;
 		}
 
-		//Create a Timer to rolling query PHY link state
-		NDIS_HANDLE timerHandle;
-		NDIS_TIMER_CHARACTERISTICS* timerChar;
+		//create spin lock for timer dpc sync
+		NdisAllocateSpinLock(&TimerDpcSpinLock);
 
-		timerChar = NdisAllocateMemoryWithTagPriority(Adapter->AdapterHandle, sizeof(NDIS_TIMER_CHARACTERISTICS), NIC_TAG, NormalPoolPriority);
-		//NdisZeroMemory(&timerChar, sizeof(NDIS_TIMER_CHARACTERISTICS));
 
-		timerChar->Header.Revision = NDIS_TIMER_CHARACTERISTICS_REVISION_1;
-		timerChar->Header.Size = sizeof(NDIS_TIMER_CHARACTERISTICS);
-		timerChar->Header.Type = NDIS_OBJECT_TYPE_TIMER_CHARACTERISTICS;
+		////Create a Timer to rolling query PHY link state
+		//NDIS_HANDLE timerHandle;
+		//NDIS_TIMER_CHARACTERISTICS* timerChar;
 
-		timerChar->AllocationTag = NIC_TAG;
-		timerChar->TimerFunction = LinkStateEvtTimerFunc;
-		timerChar->FunctionContext = Adapter;
+		//timerChar = NdisAllocateMemoryWithTagPriority(Adapter->AdapterHandle, sizeof(NDIS_TIMER_CHARACTERISTICS), NIC_TAG, NormalPoolPriority);
+		////NdisZeroMemory(&timerChar, sizeof(NDIS_TIMER_CHARACTERISTICS));
 
-		Status = NdisAllocateTimerObject(Adapter->AdapterHandle, timerChar, &timerHandle);
-		if (Status != NDIS_STATUS_SUCCESS)
-		{
-			DEBUGP(MP_ERROR, "Failed to allocate timer 0x%x\n", Status);
-			break;
-		}
+		//timerChar->Header.Revision = NDIS_TIMER_CHARACTERISTICS_REVISION_1;
+		//timerChar->Header.Size = sizeof(NDIS_TIMER_CHARACTERISTICS);
+		//timerChar->Header.Type = NDIS_OBJECT_TYPE_TIMER_CHARACTERISTICS;
 
-		Adapter->LinkStateQueryTimer = timerHandle;
+		//timerChar->AllocationTag = NIC_TAG;
+		//timerChar->TimerFunction = LinkStateEvtTimerFunc;
+		//timerChar->FunctionContext = Adapter;
+
+		//Status = NdisAllocateTimerObject(Adapter->AdapterHandle, timerChar, &timerHandle);
+		//if (Status != NDIS_STATUS_SUCCESS)
+		//{
+		//	DEBUGP(MP_ERROR, "Failed to allocate timer 0x%x\n", Status);
+		//	break;
+		//}
+
+		//Adapter->LinkStateQueryTimer = timerHandle;
 
 
 
@@ -428,6 +434,18 @@ MPInitializeEx(
 			Status = NDIS_STATUS_FAILURE;
 			break;
 		}
+
+
+
+		//start timer to listen link state. once link up initialize mac and phy
+
+		LARGE_INTEGER dueTime = { 0 };
+		dueTime.QuadPart = -10000000LL;
+		if (NdisSetTimerObject(Adapter->LinkStateQueryTimer, dueTime, 100, NULL))
+		{
+			DEBUGP(MP_ERROR, "Link query timer already queued.\n");
+		}
+
 	} while (FALSE);
 
 
@@ -497,11 +515,13 @@ MPPause(
 
 	PMP_ADAPTER Adapter = MP_ADAPTER_FROM_CONTEXT(MiniportAdapterContext);
 
+	DbgPrintEx(1, 0, "----> MPPause\n");
 	DEBUGP(MP_TRACE, "[%p] ---> MPPause\n", Adapter);
 	UNREFERENCED_PARAMETER(MiniportPauseParameters);
 	PAGED_CODE();
 
 	MP_SET_FLAG(Adapter, fMP_ADAPTER_PAUSE_IN_PROGRESS);
+
 
 	NICStopTheDatapath(Adapter);
 
@@ -522,6 +542,10 @@ MPPause(
 		//
 		MP_SET_FLAG(Adapter, fMP_ADAPTER_PAUSED);
 		MP_CLEAR_FLAG(Adapter, fMP_ADAPTER_PAUSE_IN_PROGRESS);
+
+
+
+
 		Status = NDIS_STATUS_SUCCESS;
 	}
 
@@ -530,8 +554,8 @@ MPPause(
 }
 
 
-NDIS_STATUS
-MPRestart(
+NDIS_STATUS MPRestart
+(
 	_In_  NDIS_HANDLE                             MiniportAdapterContext,
 	_In_  PNDIS_MINIPORT_RESTART_PARAMETERS       RestartParameters)
 	/*++
@@ -576,27 +600,39 @@ MPRestart(
 
 	PMP_ADAPTER Adapter = MP_ADAPTER_FROM_CONTEXT(MiniportAdapterContext);
 
+	DbgPrintEx(1, 0, "----> MPRestart\n");
 	DEBUGP(MP_TRACE, "[%p] ---> MPRestart\n", Adapter);
 	NICAddDbgLog(Adapter, 'RSta', 0, 0, 0);
 	UNREFERENCED_PARAMETER(Adapter);
 	UNREFERENCED_PARAMETER(RestartParameters);
 	PAGED_CODE();
 
-	//start timer to listen link state. once link up initialize mac and phy
-
-	LARGE_INTEGER dueTime = { 0 };
-	dueTime.QuadPart = 1000000;
-	Adapter->LinkUp = FALSE;
-	if (NdisSetCoalescableTimerObject(Adapter->LinkStateQueryTimer, dueTime, 100, NULL, 10))
-	{
-		DEBUGP(MP_ERROR, "Link query timer already queued.\n");
-	}
 
 
 	MP_CLEAR_FLAG(Adapter, (fMP_ADAPTER_PAUSE_IN_PROGRESS | fMP_ADAPTER_PAUSED));
 
 	NICStartTheDatapath(Adapter);
 
+	if (Adapter->LinkUp)
+	{
+		NotifyMediaStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_CONNECT);
+	}
+	else
+	{
+		NotifyMediaStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_DISCONNECT);
+	}
+
+	//NotifyMediaStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_CONNECT);
+
+
+	////start timer to listen link state. once link up initialize mac and phy
+
+	//LARGE_INTEGER dueTime = { 0 };
+	//dueTime.QuadPart = -100LL;
+	//if (NdisSetTimerObject(Adapter->LinkStateQueryTimer, dueTime, 100, NULL))
+	//{
+	//	DEBUGP(MP_ERROR, "Link query timer already queued.\n");
+	//}
 
 	//
 	// The simulated hardware is immediately ready to send data again, so in
@@ -654,6 +690,7 @@ Return Value:
 
 
 	PAGED_CODE();
+	DbgPrintEx(1, 0, "----> MPHaltEx\n");
 	DEBUGP(MP_TRACE, "[%p] ---> MPHaltEx\n", Adapter);
 	UNREFERENCED_PARAMETER(HaltAction);
 
@@ -746,6 +783,7 @@ MPResetEx(
 	NDIS_STATUS       Status;
 	PMP_ADAPTER       Adapter = MP_ADAPTER_FROM_CONTEXT(MiniportAdapterContext);
 
+	DbgPrintEx(1, 0, "----> MPResetEx\n");
 	DEBUGP(MP_TRACE, "[%p] ---> MPResetEx\n", Adapter);
 	NICAddDbgLog(Adapter, 'ReEx', 0, 0, 0);
 
@@ -768,6 +806,7 @@ MPResetEx(
 		//
 		TXFlushSendQueue(Adapter, NDIS_STATUS_RESET_IN_PROGRESS);
 
+
 		if (NICIsBusy(Adapter))
 		{
 			NICScheduleTheResetOrPauseDpc(Adapter, FALSE);
@@ -779,6 +818,7 @@ MPResetEx(
 			Status = NDIS_STATUS_PENDING;
 			break;
 		}
+
 
 		MP_CLEAR_FLAG(Adapter, fMP_RESET_IN_PROGRESS);
 
@@ -823,6 +863,7 @@ NICScheduleTheResetOrPauseDpc(
 		Adapter->AsyncBusyCheckCount = 0;
 	}
 
+	NdisCancelTimerObject(Adapter->LinkStateQueryTimer);
 
 	liRetryTime.QuadPart = -1000000LL; // 100ms in 100ns increments
 	NdisSetTimerObject(Adapter->AsyncBusyCheckTimer, liRetryTime, 0, NULL);
@@ -854,6 +895,10 @@ NICAsyncResetOrPauseDpc(
 
 	--*/
 {
+	NdisAcquireSpinLock(&TimerDpcSpinLock);
+	DbgPrintEx(1, 0, "Busy Check Dpc Enter.\n");
+
+
 	PMP_ADAPTER Adapter = MP_ADAPTER_FROM_CONTEXT(FunctionContext);
 	NDIS_STATUS Status = NDIS_STATUS_SUCCESS;
 
@@ -863,6 +908,7 @@ NICAsyncResetOrPauseDpc(
 
 
 	DEBUGP(MP_TRACE, "[%p] ---> NICAsyncResetOrPauseDpc\n", Adapter);
+
 
 	if (MP_TEST_FLAG(Adapter, fMP_ADAPTER_PAUSE_IN_PROGRESS)
 		|| MP_TEST_FLAG(Adapter, fMP_RESET_IN_PROGRESS))
@@ -910,9 +956,21 @@ NICAsyncResetOrPauseDpc(
 
 				NdisMResetComplete(Adapter->AdapterHandle, Status, FALSE);
 			}
+
+			//start timer to listen link state. once link up initialize mac and phy
+
+			LARGE_INTEGER dueTime = { 0 };
+			dueTime.QuadPart = -100LL;
+			if (NdisSetTimerObject(Adapter->LinkStateQueryTimer, dueTime, 100, NULL))
+			{
+				DEBUGP(MP_ERROR, "Link query timer already queued.\n");
+			}
 		}
 	}
 
+	NdisReleaseSpinLock(&TimerDpcSpinLock);
+
+	DbgPrintEx(1, 0, "Busy Check Dpc Exit.\n");
 
 	DEBUGP(MP_TRACE, "[%p] <--- NICAsyncResetOrPauseDpc Status = 0x%08x\n", Adapter, Status);
 }
@@ -953,6 +1011,7 @@ MPShutdownEx(
 	UNREFERENCED_PARAMETER(ShutdownAction);
 	UNREFERENCED_PARAMETER(Adapter);
 
+	DbgPrintEx(1, 0, "----> MPShutdownEx\n");
 	DEBUGP(MP_TRACE, "[%p] ---> MPShutdownEx\n", Adapter);
 
 	//
@@ -1222,9 +1281,10 @@ NICAllocAdapter(
 		// Set up a timer function for use with our MPReset routine.
 		//
 		Timer.TimerFunction = NICAsyncResetOrPauseDpc;
+		Timer.FunctionContext = Adapter;
 
 		Status = NdisAllocateTimerObject(
-			NdisDriverHandle,
+			Adapter->AdapterHandle,
 			&Timer,
 			&Adapter->AsyncBusyCheckTimer);
 		if (Status != NDIS_STATUS_SUCCESS)
@@ -1232,6 +1292,33 @@ NICAllocAdapter(
 			Status = NDIS_STATUS_FAILURE;
 			break;
 		}
+
+
+		//Create a Timer to rolling query PHY link state
+		NDIS_HANDLE timerHandle;
+		NDIS_TIMER_CHARACTERISTICS timerChar;
+
+		NdisZeroMemory(&timerChar, sizeof(timerChar));
+
+		timerChar.Header.Revision = NDIS_TIMER_CHARACTERISTICS_REVISION_1;
+		timerChar.Header.Size = sizeof(NDIS_TIMER_CHARACTERISTICS);
+		timerChar.Header.Type = NDIS_OBJECT_TYPE_TIMER_CHARACTERISTICS;
+
+		//timerChar->AllocationTag = NIC_TAG;
+		timerChar.TimerFunction = LinkStateEvtTimerFunc;
+		timerChar.FunctionContext = Adapter;
+
+		Status = NdisAllocateTimerObject(Adapter->AdapterHandle, &timerChar, &timerHandle);
+		if (Status != NDIS_STATUS_SUCCESS)
+		{
+			DEBUGP(MP_ERROR, "Failed to allocate timer 0x%x\n", Status);
+			break;
+		}
+
+		Adapter->LinkStateQueryTimer = timerHandle;
+
+
+
 
 		//
 		// The miniport adapter is powered up
@@ -1920,6 +2007,10 @@ VOID LinkStateEvtTimerFunc(
 	UNREFERENCED_PARAMETER(SystemSpecific2);
 	UNREFERENCED_PARAMETER(SystemSpecific3);
 
+	NdisAcquireSpinLock(&TimerDpcSpinLock);
+
+	//DbgPrintEx(1, 0, "LinkCheck Dpc Enter.\n");
+
 	PMP_ADAPTER Adapter = (PMP_ADAPTER)FunctionContext;
 
 	do {
@@ -1935,24 +2026,27 @@ VOID LinkStateEvtTimerFunc(
 			Adapter->LinkUp = currentLinkState;
 			if (Adapter->LinkUp)
 			{
-				HW_Mac_Enable(&Mac);
+				//HW_Mac_Enable(&Mac);
 				DbgPrintEx(1, 0, "Ethernet: Link up!.\n");
-				NotifyLinkStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_CONNECT);
+				NotifyMediaStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_CONNECT);
 			}
 			else
 			{
-				HW_Mac_Disable(&Mac);
+				//HW_Mac_Disable(&Mac);
 				DbgPrintEx(1, 0, "Ethernet: Link down!.\n");
-				NotifyLinkStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_DISCONNECT);
+				NotifyMediaStateChange(Adapter->AdapterHandle, NDIS_STATUS_MEDIA_DISCONNECT);
 			}
 			break;
 		}
 
 	} while (FALSE);
 
+	NdisReleaseSpinLock(&TimerDpcSpinLock);
+	//DbgPrintEx(1, 0, "LinkCheck Dpc Exit.\n");
+
 }
 
-NDIS_STATUS NotifyLinkStateChange(NDIS_HANDLE AdapterHandle, NDIS_STATUS StatusCode)
+NDIS_STATUS NotifyMediaStateChange(NDIS_HANDLE AdapterHandle, NDIS_STATUS StatusCode)
 {
 	NDIS_STATUS Status = NDIS_STATUS_SUCCESS;
 	NDIS_STATUS_INDICATION StatusIndication;
@@ -1968,9 +2062,12 @@ NDIS_STATUS NotifyLinkStateChange(NDIS_HANDLE AdapterHandle, NDIS_STATUS StatusC
 
 	StatusIndication.StatusCode = StatusCode;
 
+
 	StatusIndication.Flags = 0;
 
 	NdisMIndicateStatusEx(AdapterHandle, &StatusIndication);
 
 	return Status;
 }
+
+

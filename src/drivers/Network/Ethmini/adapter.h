@@ -2,10 +2,10 @@
 
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+	THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+	KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
 
 Module Name:
 
@@ -13,7 +13,7 @@ Module Name:
 
 Abstract:
 
-    This module contains structure definitons and function prototypes.
+	This module contains structure definitons and function prototypes.
 
 Revision History:
 
@@ -67,28 +67,28 @@ typedef struct _MP_DBGLOG
 //
 typedef struct _MP_ADAPTER
 {
-    LIST_ENTRY              List;
+	LIST_ENTRY              List;
 
-    //
-    // Keep track of various device objects.
-    //
-    PDEVICE_OBJECT          Pdo;
-    PDEVICE_OBJECT          Fdo;
-    PDEVICE_OBJECT          NextDeviceObject;
-	
+	//
+	// Keep track of various device objects.
+	//
+	PDEVICE_OBJECT          Pdo;
+	PDEVICE_OBJECT          Fdo;
+	PDEVICE_OBJECT          NextDeviceObject;
+
 	NDIS_HANDLE				LinkStateQueryTimer;
 	BOOLEAN					LinkUp;
 
-    NDIS_HANDLE             AdapterHandle;
+	NDIS_HANDLE             AdapterHandle;
 
 	// Physical Hardware Device defination
 
 	struct _ADAPTER_HW      *PhyAdapter;
 
 
-    //
-    // Status flags
-    //
+	//
+	// Status flags
+	//
 
 #define fMP_RESET_IN_PROGRESS               0x00000001
 #define fMP_DISCONNECTED                    0x00000002
@@ -98,31 +98,31 @@ typedef struct _MP_ADAPTER
 #define fMP_ADAPTER_SURPRISE_REMOVED        0x00000100
 #define fMP_ADAPTER_LOW_POWER               0x00000200
 
-    ULONG                   Flags;
+	ULONG                   Flags;
 
 
-    UCHAR                   PermanentAddress[NIC_MACADDR_SIZE];
-    UCHAR                   CurrentAddress[NIC_MACADDR_SIZE];
+	UCHAR                   PermanentAddress[NIC_MACADDR_SIZE];
+	UCHAR                   CurrentAddress[NIC_MACADDR_SIZE];
 
-    //
-    // Send tracking
-    // -------------------------------------------------------------------------
-    //
+	//
+	// Send tracking
+	// -------------------------------------------------------------------------
+	//
 
-    // Pool of unused TCBs
-    PVOID                   TcbMemoryBlock;
+	// Pool of unused TCBs
+	PVOID                   TcbMemoryBlock;
 
-    // List of unused TCBs (sliced out of TcbMemoryBlock)
-    LIST_ENTRY              FreeTcbList;
-    NDIS_SPIN_LOCK          FreeTcbListLock;
+	// List of unused TCBs (sliced out of TcbMemoryBlock)
+	LIST_ENTRY              FreeTcbList;
+	NDIS_SPIN_LOCK          FreeTcbListLock;
 
-    // List of net buffers to send that are waiting for a free TCB
-    LIST_ENTRY              SendWaitList;
-    NDIS_SPIN_LOCK          SendWaitListLock;
+	// List of net buffers to send that are waiting for a free TCB
+	LIST_ENTRY              SendWaitList;
+	NDIS_SPIN_LOCK          SendWaitListLock;
 
-    // List of TCBs that are being read by the NIC hardware
-    LIST_ENTRY              BusyTcbList;
-    NDIS_SPIN_LOCK          BusyTcbListLock;
+	// List of TCBs that are being read by the NIC hardware
+	LIST_ENTRY              BusyTcbList;
+	NDIS_SPIN_LOCK          BusyTcbListLock;
 
 	// DMA Descriptor for TX
 	PDMA_DESC				TxDmaDescPool;
@@ -130,118 +130,118 @@ typedef struct _MP_ADAPTER
 	ULONG					FirstFreeTxDMAIndex;
 	ULONG					FirstBusyTxDMAIndex;
 	ULONG					TxDmaUsed;
-	#define 				INC_TX_DMA_INDEX(x) (((x) + (1)) % NIC_MAX_BUSY_SENDS)
+#define 				INC_TX_DMA_INDEX(x) (((x) + (1)) % NIC_MAX_BUSY_SENDS)
 
-    // Number of transmit NBLs from the protocol that we still have
-    volatile LONG           nBusySend;
+	// Number of transmit NBLs from the protocol that we still have
+	volatile LONG           nBusySend;
 	volatile LONG           nBusyInd;
 	ULONG					nTxFrame;
 	ULONG					nRxFrame;
 
-    // Spin lock to ensure only one CPU is sending at a time
-    KSPIN_LOCK              SendPathSpinLock;
+	// Spin lock to ensure only one CPU is sending at a time
+	KSPIN_LOCK              SendPathSpinLock;
 
 
-    //
-    // Receive tracking
-    // -------------------------------------------------------------------------
-    //
+	//
+	// Receive tracking
+	// -------------------------------------------------------------------------
+	//
 
-    // Pool of unused RCBs
-    PVOID                   RcbMemoryBlock;
+	// Pool of unused RCBs
+	PVOID                   RcbMemoryBlock;
 
-    // List of unused RCBs (sliced out of RcbMemoryBlock)
-    LIST_ENTRY              RcbIndList;
-    NDIS_SPIN_LOCK          RcbIndListLock;
+	// List of unused RCBs (sliced out of RcbMemoryBlock)
+	LIST_ENTRY              RcbIndList;
+	NDIS_SPIN_LOCK          RcbIndListLock;
 
-    NDIS_HANDLE             RecvNblPoolHandle;
+	NDIS_HANDLE             RecvNblPoolHandle;
 
 	// DMA Descriptor for RX
 	PDMA_DESC				RxDmaDescPool;
 	ULONG					RxDmaDescIndex;
 	PVOID					RxDataBuffer;
-	#define 				INC_RX_DMA_INDEX(x) (((x) + (1)) % NIC_MAX_BUSY_RECVS)
+#define 				INC_RX_DMA_INDEX(x) (((x) + (1)) % NIC_MAX_BUSY_RECVS)
 
-    //
-    // Async pause and reset tracking
-    // -------------------------------------------------------------------------
-    //
-    NDIS_HANDLE             AsyncBusyCheckTimer;
-    LONG                    AsyncBusyCheckCount;
-
-
-    //
-    // NIC configuration
-    // -------------------------------------------------------------------------
-    //
-    ULONG                   PacketFilter;
-    ULONG                   ulLookahead;
-    ULONG64                 ulLinkSendSpeed;
-    ULONG64                 ulLinkRecvSpeed;
-    ULONG                   ulMaxBusySends;
-    ULONG                   ulMaxBusyRecvs;
-
-    // multicast list
-    ULONG                   ulMCListSize;
-    UCHAR                   MCList[NIC_MAX_MCAST_LIST][NIC_MACADDR_SIZE];
+	//
+	// Async pause and reset tracking
+	// -------------------------------------------------------------------------
+	//
+	NDIS_HANDLE             AsyncBusyCheckTimer;
+	LONG                    AsyncBusyCheckCount;
 
 
-    //
-    // Statistics
-    // -------------------------------------------------------------------------
-    //
+	//
+	// NIC configuration
+	// -------------------------------------------------------------------------
+	//
+	ULONG                   PacketFilter;
+	ULONG                   ulLookahead;
+	ULONG64                 ulLinkSendSpeed;
+	ULONG64                 ulLinkRecvSpeed;
+	ULONG                   ulMaxBusySends;
+	ULONG                   ulMaxBusyRecvs;
 
-    // Packet counts
-    ULONG64                 FramesRxDirected;
-    ULONG64                 FramesRxMulticast;
-    ULONG64                 FramesRxBroadcast;
-    ULONG64                 FramesTxDirected;
-    ULONG64                 FramesTxMulticast;
-    ULONG64                 FramesTxBroadcast;
+	// multicast list
+	ULONG                   ulMCListSize;
+	UCHAR                   MCList[NIC_MAX_MCAST_LIST][NIC_MACADDR_SIZE];
 
-    // Byte counts
-    ULONG64                 BytesRxDirected;
-    ULONG64                 BytesRxMulticast;
-    ULONG64                 BytesRxBroadcast;
-    ULONG64                 BytesTxDirected;
-    ULONG64                 BytesTxMulticast;
-    ULONG64                 BytesTxBroadcast;
 
-    // Count of transmit errors
-    ULONG                   TxAbortExcessCollisions;
-    ULONG                   TxLateCollisions;
-    ULONG                   TxDmaUnderrun;
-    ULONG                   TxLostCRS;
-    ULONG                   TxOKButDeferred;
-    ULONG                   OneRetry;
-    ULONG                   MoreThanOneRetry;
-    ULONG                   TotalRetries;
-    ULONG                   TransmitFailuresOther;
+	//
+	// Statistics
+	// -------------------------------------------------------------------------
+	//
 
-    // Count of receive errors
-    ULONG                   RxCrcErrors;
-    ULONG                   RxAlignmentErrors;
-    ULONG                   RxResourceErrors;
-    ULONG                   RxDmaOverrunErrors;
-    ULONG                   RxCdtFrames;
-    ULONG                   RxRuntErrors;
+	// Packet counts
+	ULONG64                 FramesRxDirected;
+	ULONG64                 FramesRxMulticast;
+	ULONG64                 FramesRxBroadcast;
+	ULONG64                 FramesTxDirected;
+	ULONG64                 FramesTxMulticast;
+	ULONG64                 FramesTxBroadcast;
 
-    //
-    // Reference to the allocated root of MP_ADAPTER memory, which may not be cache aligned.
-    // When allocating, the pointer returned will be UnalignedBuffer + an offset that will make
-    // the base pointer cache aligned.
-    //
-    PVOID                   UnalignedAdapterBuffer;
-    ULONG                   UnalignedAdapterBufferSize;
+	// Byte counts
+	ULONG64                 BytesRxDirected;
+	ULONG64                 BytesRxMulticast;
+	ULONG64                 BytesRxBroadcast;
+	ULONG64                 BytesTxDirected;
+	ULONG64                 BytesTxMulticast;
+	ULONG64                 BytesTxBroadcast;
 
-    //
-    // An OID request that could not be fulfulled at the time of the call. These OIDs are serialized
-    // so we will not receive new queue management OID's until this one is complete.
-    // Currently this is used only for freeing a Queue (which may still have outstanding references)
-    //
-    PNDIS_OID_REQUEST PendingRequest;
+	// Count of transmit errors
+	ULONG                   TxAbortExcessCollisions;
+	ULONG                   TxLateCollisions;
+	ULONG                   TxDmaUnderrun;
+	ULONG                   TxLostCRS;
+	ULONG                   TxOKButDeferred;
+	ULONG                   OneRetry;
+	ULONG                   MoreThanOneRetry;
+	ULONG                   TotalRetries;
+	ULONG                   TransmitFailuresOther;
 
-    NDIS_DEVICE_POWER_STATE CurrentPowerState;
+	// Count of receive errors
+	ULONG                   RxCrcErrors;
+	ULONG                   RxAlignmentErrors;
+	ULONG                   RxResourceErrors;
+	ULONG                   RxDmaOverrunErrors;
+	ULONG                   RxCdtFrames;
+	ULONG                   RxRuntErrors;
+
+	//
+	// Reference to the allocated root of MP_ADAPTER memory, which may not be cache aligned.
+	// When allocating, the pointer returned will be UnalignedBuffer + an offset that will make
+	// the base pointer cache aligned.
+	//
+	PVOID                   UnalignedAdapterBuffer;
+	ULONG                   UnalignedAdapterBufferSize;
+
+	//
+	// An OID request that could not be fulfulled at the time of the call. These OIDs are serialized
+	// so we will not receive new queue management OID's until this one is complete.
+	// Currently this is used only for freeing a Queue (which may still have outstanding references)
+	//
+	PNDIS_OID_REQUEST PendingRequest;
+
+	NDIS_DEVICE_POWER_STATE CurrentPowerState;
 
 	//
 	// Debug Log
@@ -254,34 +254,37 @@ typedef struct _MP_ADAPTER
 
 } MP_ADAPTER, *PMP_ADAPTER;
 
+NDIS_SPIN_LOCK			TimerDpcSpinLock;
+
+
 #define MP_ADAPTER_FROM_CONTEXT(_ctx_) ((PMP_ADAPTER)(_ctx_))
 
 NDIS_STATUS
 NICAllocRCBData(
-    _In_ PMP_ADAPTER Adapter,
-    ULONG NumberOfRcbs);
+	_In_ PMP_ADAPTER Adapter,
+	ULONG NumberOfRcbs);
 
 NDIS_STATUS
 NICAllocTCBData(
-    _In_ PMP_ADAPTER Adapter,
-    ULONG NumberOfTcbs
-    );
+	_In_ PMP_ADAPTER Adapter,
+	ULONG NumberOfTcbs
+);
 
 BOOLEAN
 NICIsBusy(
-    _In_  PMP_ADAPTER  Adapter);
+	_In_  PMP_ADAPTER  Adapter);
 
 VOID
 NICInitializeDbgLog(
-    _In_  PMP_ADAPTER  Adapter);
+	_In_  PMP_ADAPTER  Adapter);
 
 VOID
 NICAddDbgLog(
-    _Inout_  PMP_ADAPTER  Adapter,
-    _In_ ULONG Sig,
-    _In_ ULONG Data1,
-    _In_ ULONG Data2,
-    _In_ ULONG Data3);
+	_Inout_  PMP_ADAPTER  Adapter,
+	_In_ ULONG Sig,
+	_In_ ULONG Data1,
+	_In_ ULONG Data2,
+	_In_ ULONG Data3);
 
 
 // Prototypes for standard NDIS miniport entry points
@@ -300,4 +303,4 @@ MINIPORT_SHUTDOWN                   MPShutdownEx;
 MINIPORT_CANCEL_OID_REQUEST         MPCancelOidRequest;
 
 NDIS_TIMER_FUNCTION LinkStateEvtTimerFunc;
-NDIS_STATUS NotifyLinkStateChange(NDIS_HANDLE AdapterHandle, NDIS_STATUS StatusCode);
+NDIS_STATUS NotifyMediaStateChange(NDIS_HANDLE AdapterHandle, NDIS_STATUS StatusCode);

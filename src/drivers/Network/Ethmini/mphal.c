@@ -233,6 +233,7 @@ HWInitialize(
 				DEBUGP(MP_ERROR, "Failed to Init Hardware.\n");
 				goto Exit;
 			}
+
 		}
 
 		if (bInterruptFound)
