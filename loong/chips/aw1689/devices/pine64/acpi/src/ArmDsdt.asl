@@ -101,49 +101,49 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
 				})				
 			}
 				
-			Device(TP02)
-			{
-			    Name(_ADR, 0)
-			    Name(_HID, "AWTP0002") 
-			    Name(_UID, 0)
-	        Method (_STA, 0, NotSerialized)  
-          {
-              Return (0x00)
-          }
-			    Method(_CRS, 0x0, NotSerialized)
-			    {
-			        Name (RBUF, ResourceTemplate ()
-			        {
-                  //gt82x tp address is 0x5d
-			            I2CSerialBus(0x5D, ControllerInitiated, 400000, AddressingMode7Bit, "\\_SB.I2C0", , )
-			            GpioInt(Edge, ActiveLow, Exclusive, PullDefault, 0, "\\_SB.PIOH") {4}
-			            GpioIo(Exclusive, PullDefault, 0, 25, IoRestrictionOutputOnly, "\\_SB.PIOH") {8}
-			        })
-			        Return(RBUF)
-			    }
-			}//End of device 'TP02'
-			
-			Device(TP04)
-			{
-			    Name(_ADR, 0)
-			    Name(_HID, "AWTP0004")
-			    Name(_UID, 0)
-			    Method (_STA, 0, NotSerialized) 
-          {
-              Return (0x00)
-          }
-			    Method(_CRS, 0x0, NotSerialized)
-			    {
-			        Name (RBUF, ResourceTemplate ()
-			        {
-			            //silead tp address is 0x40
-			            I2CSerialBus(0x40, ControllerInitiated, 400000, AddressingMode7Bit, "\\_SB.I2C0", , )
-			            GpioInt(Edge, ActiveLow, Exclusive, PullDefault, 0, "\\_SB.PIOH") {4}
-			            GpioIo(Exclusive, PullDefault, 0, 25, IoRestrictionOutputOnly, "\\_SB.PIOH") {8}
-			        })
-			        Return(RBUF)
-			    }
-			}//End of device 'TP04'
+	//	Device(TP02)
+	//	{
+	//	    Name(_ADR, 0)
+	//	    Name(_HID, "AWTP0002") 
+	//	    Name(_UID, 0)
+	//       Method (_STA, 0, NotSerialized)  
+    //     {
+    //         Return (0x00)
+    //     }
+	//	    Method(_CRS, 0x0, NotSerialized)
+	//	    {
+	//	        Name (RBUF, ResourceTemplate ()
+	//	        {
+    //             //gt82x tp address is 0x5d
+	//	            I2CSerialBus(0x5D, ControllerInitiated, 400000, AddressingMode7Bit, "\\_SB.I2C0", , )
+	//	            GpioInt(Edge, ActiveLow, Exclusive, PullDefault, 0, "\\_SB.PIOH") {4}
+	//	            GpioIo(Exclusive, PullDefault, 0, 25, IoRestrictionOutputOnly, "\\_SB.PIOH") {8}
+	//	        })
+	//	        Return(RBUF)
+	//	    }
+	//	}//End of device 'TP02'
+	//	
+	//	Device(TP04)
+	//	{
+	//	    Name(_ADR, 0)
+	//	    Name(_HID, "AWTP0004")
+	//	    Name(_UID, 0)
+	//	    Method (_STA, 0, NotSerialized) 
+    //     {
+    //         Return (0x00)
+    //   }
+	//	    Method(_CRS, 0x0, NotSerialized)
+	//	    {
+	//	        Name (RBUF, ResourceTemplate ()
+	//	        {
+	//	            //silead tp address is 0x40
+	//	            I2CSerialBus(0x40, ControllerInitiated, 400000, AddressingMode7Bit, "\\_SB.I2C0", , )
+	//	            GpioInt(Edge, ActiveLow, Exclusive, PullDefault, 0, "\\_SB.PIOH") {4}
+	//	            GpioIo(Exclusive, PullDefault, 0, 25, IoRestrictionOutputOnly, "\\_SB.PIOH") {8}
+	//	        })
+	//	        Return(RBUF)
+	//	    }
+	//	}//End of device 'TP04'
 		}//End of Device 'i2c0'
 		
 		Device(I2C1)
@@ -151,14 +151,14 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
 			Name(_HID, "AWTH0002")								
 			Name(_UID, 0x1)					
 			Method (_STA, 0, NotSerialized) 
-      {
-          Return (0x0F)
-      }
+            {
+                Return (0x0F)
+            }
 			Name(_CRS, ResourceTemplate ()
-				{
-					MEMORY32FIXED(ReadWrite, 0x01c2b000, 0x3ff, ) 
-					Interrupt(ResourceConsumer, Edge, ActiveLow, Exclusive, , , ) {39}
-				})
+			{
+				MEMORY32FIXED(ReadWrite, 0x01c2b000, 0x3ff, ) 
+				Interrupt(ResourceConsumer, Edge, ActiveLow, Exclusive, , , ) {39}
+			})
 				
 			Method(BNUM, 0, NotSerialized)
 			{
@@ -174,15 +174,15 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
 		{
 			Name(_HID, "AWTH0002")								
 			Name(_UID, 0x2)					
-		  Method (_STA, 0, NotSerialized) 
-      {
-          Return (0x00)
-      }
+		    Method (_STA, 0, NotSerialized) 
+            {
+                Return (0x0F)
+            }
 			Name(_CRS, ResourceTemplate ()
-				{
-					MEMORY32FIXED(ReadWrite, 0x01c2b400, 0x3ff, ) 
-					Interrupt(ResourceConsumer, Edge, ActiveLow, Exclusive, , , ) {40}
-				})
+			{
+				MEMORY32FIXED(ReadWrite, 0x01c2b400, 0x3ff, ) 
+				Interrupt(ResourceConsumer, Edge, ActiveLow, Exclusive, , , ) {40}
+			})
 				
 			Method(BNUM, 0, NotSerialized)
 			{
@@ -277,8 +277,12 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             Name(_CRS, ResourceTemplate ()
             {
                 MEMORY32FIXED(ReadWrite, 0x01c30000, 0x10000, ) 
-                MEMORY32FIXED(ReadWrite, 0x01c20874, 0x4,)
                 Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {114}
+
+                //MDC gpio connection
+                //GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IORestrictionNoneAndPreserve, "\\_SB.PIOD", 0x00, ResourceConsumer, ,) { 22 } 
+                //MDIO gpio connection
+                //GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IORestrictionNoneAndPreserve, "\\_SB.PIOD", 0x00, ResourceConsumer, ,) { 23 }
             })
             
             Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
@@ -373,42 +377,43 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
  
 				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 4 }
 				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 4 }
+
 				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 5 }
+    			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 5 }
                 GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 5 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 6 }
+
+    			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 6 }
                 GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 6 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 7 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 7 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 8 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 8 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 9 }
-                GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 9 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 10 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 10 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 11 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 11 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 12 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 12 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 13 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 13 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 14 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 14 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 15 }
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 15 }
-				
-				GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 16 } 
-				GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 16 }					
+
+			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 7 }
+			GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 7 }
+    
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 8 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 8 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 9 }
+                  GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 9 }
+              
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 10 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 10 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 11 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 11 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 12 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 12 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 13 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 13 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 14 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 14 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 15 }
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 15 }
+        
+    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 16 } 
+    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 16 }					
             })
 
             Name(_DSD, Package()

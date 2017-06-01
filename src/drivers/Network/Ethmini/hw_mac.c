@@ -11,7 +11,7 @@ NDIS_STATUS HW_MAC_Init(PHWADAPTER PhyAdapter, PMAC Mac)
 	ASSERT(Mac->RegisterBase);
 
 	//Set MDIO & MDC GPIO to right function
-	CHKSTATUS(HW_MAC_Set_Mdio_Pin_Function(PhyAdapter), 0);
+	//CHKSTATUS(HW_MAC_Set_Mdio_Pin_Function(PhyAdapter), 0);
 	
 	// Wait HW reset is finished
 	CHKSTATUS(HW_Mac_Wait_Reset_Clear(Mac, 100), 0);

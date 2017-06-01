@@ -45,6 +45,8 @@ Notes:
 
 #define DBGLOG_SIZE (PAGE_SIZE * 16)
 
+#define GPIO_PIN_NUM 2
+
 typedef struct _MP_DBGLOG_ENTRY
 {
 	ULONG_PTR Sig;
@@ -75,6 +77,8 @@ typedef struct _MP_ADAPTER
 	PDEVICE_OBJECT          Pdo;
 	PDEVICE_OBJECT          Fdo;
 	PDEVICE_OBJECT          NextDeviceObject;
+
+	LARGE_INTEGER			GpioConnectionId[GPIO_PIN_NUM];
 
 	NDIS_HANDLE				LinkStateQueryTimer;
 	BOOLEAN					LinkUp;

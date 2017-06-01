@@ -117,8 +117,9 @@ HWInitialize(
 	BOOLEAN                         bPorttFound = FALSE;
 	BOOLEAN                         bInterruptFound = FALSE;
 	BOOLEAN                         bMacMemoryFound = FALSE;
-	BOOLEAN							bPd22MemoryFound = FALSE;
 	PHWADAPTER                      PhyAdapter = NULL;
+	
+	ULONG gpioPinCount = 0;
 
 	DEBUGP(MP_TRACE, "[%p] ---> HWInitialize\n", Adapter);
 	PAGED_CODE();
@@ -166,12 +167,20 @@ HWInitialize(
 						PhyAdapter->rMemory = *pResDesc;
 						bMacMemoryFound = TRUE;
 					}
-					else if (!bPd22MemoryFound)
+					break;
+				case CmResourceTypeConnection:
+
+					if (CM_RESOURCE_CONNECTION_CLASS_GPIO == pResDesc->u.Connection.Class 
+						&& CM_RESOURCE_CONNECTION_TYPE_GPIO_IO == pResDesc->u.Connection.Type)
 					{
-						PhyAdapter->MdioPinRegister.PhysicalBase = pResDesc->u.Memory.Start;
-						PhyAdapter->MdioPinRegister.Length = pResDesc->u.Memory.Length;
-						bPd22MemoryFound = TRUE;
+						if (gpioPinCount < GPIO_PIN_NUM)
+						{
+							Adapter->GpioConnectionId[gpioPinCount].LowPart = pResDesc->u.Connection.IdLowPart;
+							Adapter->GpioConnectionId[gpioPinCount].HighPart = pResDesc->u.Connection.IdHighPart;
+							gpioPinCount++;
+						}
 					}
+
 					break;
 				}
 			}
@@ -188,20 +197,6 @@ HWInitialize(
 		}
 
 		
-		if (bPd22MemoryFound)
-		{
-			Status = NdisMMapIoSpace(
-				&PhyAdapter->MdioPinRegister.VirtualBase,
-				Adapter->AdapterHandle,
-				PhyAdapter->MdioPinRegister.PhysicalBase,
-				PhyAdapter->MdioPinRegister.Length);
-			if (Status != NDIS_STATUS_SUCCESS)
-			{
-				DEBUGP(MP_ERROR, "Failed to map MDIO & MDC port sel control register.\n");
-				goto Exit;
-			}
-		}
-
 		//
 		// Map bus-relative registers to virtual system-space
 		// using NdisMMapIoSpace
