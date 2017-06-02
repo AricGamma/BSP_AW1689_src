@@ -24,7 +24,6 @@ for /f "delims==" %%i in ('dir /ad /b') do (
 )
 
 call %IotAddOnPath%\Tools\buildpkg Custom.Cmd
-call %IotAddOnPath%\Tools\buildpkg Provisioning.Auto
 call %IotAddOnPath%\Tools\buildpkg Registry.Version
 call %IotAddOnPath%\Tools\buildpkg OemTools.InstallTools
 call %IotAddOnPath%\Tools\createpkg Registry.ConfigSettings

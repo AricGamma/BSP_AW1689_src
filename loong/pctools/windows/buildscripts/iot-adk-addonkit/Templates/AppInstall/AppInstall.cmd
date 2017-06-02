@@ -69,6 +69,7 @@ set AppxID=%AppxID: =%
 echo Launching %AppxID% 
 REM Trigger IoTStartup
 iotstartup.exe add headed %AppxID%
+iotstartup.exe run %AppxID%
 exit /b
 
 :SUB_CHECKERROR
