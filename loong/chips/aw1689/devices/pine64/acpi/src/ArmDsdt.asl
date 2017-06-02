@@ -382,38 +382,47 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
     			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 5 }
                 GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 5 }
 
+    			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOH", 0, ResourceConsumer, , ) { 5 }
+                GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOH",)                            { 5 }
+
     			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 6 }
                 GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 6 }
 
-			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 7 }
-			GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 7 }
-    
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 8 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 8 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 9 }
-                  GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 9 }
-              
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 10 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 10 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 11 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 11 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 12 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 12 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 13 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 13 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 14 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 14 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 15 }
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 15 }
-        
-    		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 16 } 
-    		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 16 }					
+    			GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOH", 0, ResourceConsumer, , ) { 6 }
+                GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOH",)                            { 6 }
+
+        		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 7 }
+        		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 7 }
+            
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 8 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 8 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 9 }
+                GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 9 }
+
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOH", 0, ResourceConsumer, , ) { 9 }
+                GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOH",)                            { 9 }
+
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 10 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 10 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 11 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 11 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 12 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 12 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 13 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 13 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 14 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 14 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 15 }
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 15 }
+               
+           		GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 16 } 
+           		GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 16 }					
             })
 
             Name(_DSD, Package()
@@ -426,8 +435,8 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
                     Package(2) { "bus-I2C-I2C2", Package() { 1 }},
 		    Package(2) { "bus-I2C-I2C3", Package() { 2 }},
 
-			Package(2){"GPIO-PinCount",54},
-			Package(2){"GPIO-UseDescriptorPinNumbers",1},
+			//Package(2){"GPIO-PinCount",54},
+			//Package(2){"GPIO-UseDescriptorPinNumbers",1},
 			Package(2){"GPIO-SupportedDriveModes",0xf}
 
                 }
