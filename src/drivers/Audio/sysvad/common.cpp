@@ -2604,7 +2604,7 @@ NTSTATUS CodecPowerDownCompletionCallbackRoutine
 
 	pAdapterCommon = (CAdapterCommon *)pContext;
 
-	KeSetEvent(&pAdapterCommon->m_CodecD3ReadyEvent, 0, FALSE);
+	//KeSetEvent(&pAdapterCommon->m_CodecD3ReadyEvent, 0, FALSE);
 
 Exit:
 	DPF_ENTER("Exit with 0x%lx.", Status);
