@@ -278,11 +278,6 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             {
                 MEMORY32FIXED(ReadWrite, 0x01c30000, 0x10000, ) 
                 Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {114}
-
-                //MDC gpio connection
-                //GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IORestrictionNoneAndPreserve, "\\_SB.PIOD", 0x00, ResourceConsumer, ,) { 22 } 
-                //MDIO gpio connection
-                //GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IORestrictionNoneAndPreserve, "\\_SB.PIOD", 0x00, ResourceConsumer, ,) { 23 }
             })
             
             Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status

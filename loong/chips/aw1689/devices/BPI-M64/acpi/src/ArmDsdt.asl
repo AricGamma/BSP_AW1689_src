@@ -180,36 +180,27 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             {
                 Name (_S4W, 0x02)
                 Name (_S0W, 0x02)
-                // Name (_ADR, One)  // _ADR: Address
-                // Method (_STA, 0, NotSerialized)  // _STA: Status
-                // {
-                    // Return (0x0F)
-                // }
+                Name (_ADR, One)  // _ADR: Address
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (0x0F)
+                }
         
-                // Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-                // {
-                    // Return (Zero)
-                // }
+                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+                {
+                    Return (Zero)
+                }
         
-                // Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-                // {
-                    // Name (RBUF, ResourceTemplate ()
-                    // {
-                        // GpioInt(Edge, ActiveHigh, ExclusiveAndWake, PullDown, 0, "\\_SB.PIOL") {3}
-                        // GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IoRestrictionOutputOnly, "\\_SB.PIOL", 0x00, ResourceConsumer, ,) { 2 }
-                    // })
-                    // Return (RBUF)
-                // }
+                Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+                {
+                    Name (RBUF, ResourceTemplate ()
+                    {
+                        GpioInt(Edge, ActiveHigh, ExclusiveAndWake, PullDown, 0, "\\_SB.PIOL") {3}
+                        GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IoRestrictionOutputOnly, "\\_SB.PIOL", 0x00, ResourceConsumer, ,) { 2 }
+                    })
+                    Return (RBUF)
+                }
 				
-				Method (_ADR)
-				{
-					Return (0)
-				}
-
-				Method (_RMV) // Is removable
-				{
-					Return (0) // 0 - fixed
-				}
             }
               
         }//End of Device 'SDM1'
@@ -247,7 +238,6 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             Name(_CRS, ResourceTemplate ()
             {
                 MEMORY32FIXED(ReadWrite, 0x01c30000, 0x10000, ) 
-                MEMORY32FIXED(ReadWrite, 0x01c20874, 0x4,)
                 Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {114}
             })
             
@@ -363,15 +353,42 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
 					
 					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 0 }
 					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 0 }
+
 					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 2 }
 					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 2 }
+
 					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 3 }
 					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 3 }
 					
 					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 4 }
 					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 4 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOD", 0, ResourceConsumer, , ) { 4 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOD",)                            { 4 }
+
 					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOC", 0, ResourceConsumer, , ) { 7 }
 					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOC",)                            { 7 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOH", 0, ResourceConsumer, , ) { 7 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOH",)                            { 7 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOL", 0, ResourceConsumer, , ) { 7 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOL",)                            { 7 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOL", 0, ResourceConsumer, , ) { 8 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOL",)                            { 8 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOL", 0, ResourceConsumer, , ) { 9 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOL",)                            { 9 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOH", 0, ResourceConsumer, , ) { 10 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOH",)                            { 10 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOH", 0, ResourceConsumer, , ) { 11 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOH",)                            { 11 }
+
+					GpioIO(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.PIOL", 0, ResourceConsumer, , ) { 12 }
+					GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, "\\_SB.PIOL",)                            { 12 }
             })
 
             Name(_DSD, Package()
@@ -384,8 +401,6 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
                     Package(2) { "bus-I2C-I2C2", Package() { 1 }},
 		            Package(2) { "bus-I2C-I2C3", Package() { 2 }},
 
-			        Package(2){"GPIO-PinCount",54},
-			        Package(2){"GPIO-UseDescriptorPinNumbers",1},
 			        Package(2){"GPIO-SupportedDriveModes",0xf}
 
                 }

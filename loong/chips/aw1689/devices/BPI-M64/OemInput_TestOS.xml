@@ -94,7 +94,6 @@
 <Feature>AW1689_SUNXICIR</Feature>
 <Feature>AW1689_VHFHID</Feature>
 <Feature>TP_GT82X</Feature> 
-<Feature>RTWLANS</Feature> 
 <Feature>AW1689_ETHMINI</Feature>
 
 <Feature>OEM_CustomCmd</Feature>
