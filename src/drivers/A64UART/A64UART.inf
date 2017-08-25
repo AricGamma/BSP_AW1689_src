@@ -1,0 +1,88 @@
+;
+; A64UART.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Ports ; TODO: edit Class
+ClassGuid={4d36e978-e325-11ce-bfc1-08002be10318} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=A64UART.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Class section =====================
+
+[Serial_Inst.NT.HW]
+Addreg=Serial_Inst.NT.HW.AddReg
+
+[Serial_Inst.NT.HW]
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GRGW;;;BU)"
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+A64UART.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%A64UART.DeviceDesc%=A64UART_Device, ACPI\AWTH0009 ; TODO: edit hw-id    
+[A64UART_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+A64UART.sys
+
+;-------------- Service installation
+[A64UART_Device.NT.Services]
+AddService = A64UART,%SPSVCINST_ASSOCSERVICE%, A64UART_Service_Inst
+
+; -------------- A64UART driver install sections
+[A64UART_Service_Inst]
+DisplayName    = %A64UART.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\A64UART.sys
+
+;
+;--- A64UART_Device Coinstaller installation ------
+;
+
+[DestinationDirs]
+A64UART_Device_CoInstaller_CopyFiles = 11
+
+[A64UART_Device.NT.CoInstallers]
+AddReg=A64UART_Device_CoInstaller_AddReg
+CopyFiles=A64UART_Device_CoInstaller_CopyFiles
+
+[A64UART_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[A64UART_Device_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[SourceDisksFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+[A64UART_Device.NT.Wdf]
+KmdfService =  A64UART, A64UART_wdfsect
+[A64UART_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Allwinner" ;TODO: Replace with your manufacturer name
+ClassName="Ports" ; TODO: edit ClassName
+DiskName = "A64UART Installation Disk"
+A64UART.DeviceDesc = "A64UART Device"
+A64UART.SVCDESC = "A64UART Service"

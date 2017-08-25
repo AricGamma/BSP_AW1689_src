@@ -226,6 +226,54 @@ DefinitionBlock("mindsdt.aml", "DSDT", 0x01, "AWTH", "SUN50IW1", 0x00000001)
             }
         
         }//End of Device 'SDM2'
+	
+	
+	Device(COM2)
+        {
+            Name(_HID, "AWTH0009")                                
+            Name(_UID, 0x2)     
+            Method (_STA, 0, NotSerialized) 
+            {
+                Return (0x0F)
+            }                  
+            Name(_CRS, ResourceTemplate ()
+            {
+
+				   MEMORY32FIXED(ReadWrite, 0x01c28800, 0x400, ) 
+                Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {34}
+                UARTSerialBus( 
+                              115200,                 // InitialBaudRate: in BPS 
+                              ,                      // BitsPerByte: default to 8 bits 
+                              ,                      // StopBits: Defaults to one bit 
+                              0x00,                   // LinesInUse: 8 1bit flags to 
+                                                      //   declare enabled control lines. 
+                                                      //   Raspberry Pi2 does not exposed 
+                                                      //   HW control signals > not supported. 
+                                                      //   Optional bits: 
+                                                      //   - Bit 7 (0x80) Request To Send (RTS) 
+                                                      //   - Bit 6 (0x40) Clear To Send (CTS) 
+                                                      //   - Bit 5 (0x20) Data Terminal Ready (DTR) 
+                                                      //   - Bit 4 (0x10) Data Set Ready (DSR) 
+                                                      //   - Bit 3 (0x08) Ring Indicator (RI) 
+                                                      //   - Bit 2 (0x04) Data Carrier Detect (DTD) 
+                                                      //   - Bit 1 (0x02) Reserved. Must be 0. 
+                                                      //   - Bit 0 (0x01) Reserved. Must be 0. 
+                               ,                      // IsBigEndian: 
+                                                      //   default to LittleEndian. 
+                               ,                      // Parity: Defaults to no parity 
+                               ,                      // FlowControl: Defaults to 
+                                                      //   no flow control. 
+                               64,                    // ReceiveBufferSize 
+                               64,                    // TransmitBufferSize 
+                               "\\_SB.COM2",          // ResourceSource: dummy device node, any device in ACPI table seems ok 
+                               ,                      // ResourceSourceIndex: assumed to be 0 
+                               ,                      // ResourceUsage: assumed to be 
+                                                      //   ResourceConsumer 
+                               COM2,                  // DescriptorName: creates name 
+                                                      //   for offset of resource descriptor 
+                               )                      // Vendor data 
+              
+            })
         
         Device(ETH0)
         {
